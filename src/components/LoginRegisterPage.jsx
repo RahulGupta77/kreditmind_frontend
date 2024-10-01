@@ -20,7 +20,7 @@ const LoginRegisterPage = () => {
     }
 
     try {
-      const response = await fetch(postAPI, {
+       await fetch(postAPI, {
         method: "POST",
         credentials: "include",
         body: JSON.stringify({ ...formData }),
@@ -28,14 +28,14 @@ const LoginRegisterPage = () => {
           "Content-Type": "application/json",
         },
       });
-      if (!response.ok) throw new Error("Error 404: Client Side Error");
+      // if (!response.ok) throw new Error("Error 404: Client Side Error");
       setLoading(false);
       if (currentButtonTab === "register") {
         setCurrentButtonTab("login");
       } else {
         navigate("/user");
       }
-      toast.success("User registered successfully");
+      toast.success(`User ${currentButtonTab} successful`);
     } catch (error) {
       console.log(error);
       toast.error(error.message);
@@ -66,7 +66,7 @@ const LoginRegisterPage = () => {
               [
                 currentButtonTab === "login"
                   ? " bg-[#58c163] text-white"
-                  : "text-gray-800 bg-gray-200 hover:bg-gray-300",
+                  : "text-gray-800 bg-gray-100 hover:bg-gray-200",
               ]
             }
           >
@@ -82,7 +82,7 @@ const LoginRegisterPage = () => {
               [
                 currentButtonTab === "register"
                   ? " bg-[#58c163] text-white"
-                  : "text-gray-800 bg-gray-200 hover:bg-gray-300",
+                  : "text-gray-800 bg-gray-100 hover:bg-gray-200",
               ]
             }
           >
