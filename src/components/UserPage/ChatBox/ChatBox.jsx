@@ -128,7 +128,7 @@ const ChatBox = () => {
           id="user_query"
           name="user_query"
           type="text"
-          className="w-10/12 h-full px-1 focus:outline-none bg-slate-50 text-gray-800"
+          className="w-10/12 h-full px-1 focus:outline-none text-gray-800"
           placeholder="Write a message"
         />
         <button
