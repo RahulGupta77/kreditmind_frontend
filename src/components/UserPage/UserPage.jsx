@@ -9,7 +9,7 @@ const UserPage = () => {
         <UserDetails />
       </div>
       <div className="w-[30%] border-t-2">
-        {/* <ChatBox /> */}
+        <ChatBox />
       </div>
     </div>
   );
