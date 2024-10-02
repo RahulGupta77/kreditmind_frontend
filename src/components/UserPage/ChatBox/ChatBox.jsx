@@ -122,7 +122,7 @@ const ChatBox = () => {
       </div>
       <form
         onSubmit={formSubmit}
-        className="border-2 rounded-lg w-96 mt-3 border-gray-300 h-14 overflow-hidden flex justify-center items-center"
+        className="border-2 rounded-lg w-96 border-gray-300 h-14 overflow-hidden flex justify-center items-center"
       >
         <input
           id="user_query"
